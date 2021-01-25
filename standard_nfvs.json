@@ -1,0 +1,34 @@
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "-166.631287",
+	"NFVs" : [
+			{
+				"Name":"NF_NAT",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.967742",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NONE",
+				"RW_Hint":"1111110000000000"
+			},
+			{
+				"Name":"NF_Firewall",
+				"Type":"CPU_NF",
+				"Cost(ns)":"0.000000",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.721497",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010011111100"
+			}
+		]
+
+}
