@@ -6,7 +6,7 @@
 //这里速度的单位是GB/s 相当于 B/ns 最终得到的时间大小是以纳秒为单位的
 #define HTOD_SPEED 12.4
 #define DTOH_SPEED 13.1
-#define PKT_SIZE 64
+#define PKT_SIZE 1518 //64-1518表示以太网数据帧(包括首部和尾部)的大小范围
 #define IP_SIZE 4
 #define IP_HTOD_COST (IP_SIZE/HTOD_SPEED)
 #define IP_DTOH_COST (IP_SIZE/DTOH_SPEED)
@@ -19,8 +19,8 @@
 #define FLAG_SIZE 1
 #define FLAG_HTOD_COST (FLAG_SIZE/HTOD_SPEED)
 #define FLAG_DTOH_COST (FLAG_SIZE/DTOH_SPEED)
-#define PAYLOAD_HTOD_COST ((PKT_SIZE - 20 - 14 - 8) / HTOD_SPEED)
-#define PAYLOAD_DTOH_COST ((PKT_SIZE - 20 - 14 - 8) / DTOH_SPEED)
+#define PAYLOAD_HTOD_COST ((PKT_SIZE - 20 - 18 - 8) / HTOD_SPEED)
+#define PAYLOAD_DTOH_COST ((PKT_SIZE - 20 - 18 - 8) / DTOH_SPEED)
 
 #define FLAG_TAG 0b00000010
 #define NONE_TAG 0b00000000

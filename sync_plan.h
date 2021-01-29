@@ -21,9 +21,9 @@ typedef struct sync_plan_s{
     uint8_t htod_plan;
     uint8_t dtoh_plan;
     uint16_t sync_plan;
-    
+    float sync_cost;
     //constructor
-    sync_plan_s():htod_plan(0),dtoh_plan(0),sync_plan(0){}
+    sync_plan_s():htod_plan(0),dtoh_plan(0),sync_plan(0),sync_cost(0){}
 }sync_plan_t;
 
 typedef enum NF_type_s{
@@ -71,6 +71,6 @@ void get_rw_hint(void);
 void get_sync_plan(void);
 
 //创建json和编译文件
-void create_sync_JSON(void);
+void create_sync_JSON(float cost);
 void create_compile_file(void);
 #endif  

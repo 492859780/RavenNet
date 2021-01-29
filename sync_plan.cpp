@@ -277,15 +277,16 @@ static inline void add_nf_to_json(string* str,string key,nf_node_t** arrays,int 
 		tp += ",\n";
 		snprintf(str,sizeof(str),fmt.c_str(),"RW_Hint",parse_binary_to_string(arrays[i]->client.hint.rw_hint,16).c_str());
 		tp += str;
-		tp += "\n";
-		/*
+		tp += ",\n";
+		snprintf(str,sizeof(str),fmt.c_str(),"Sync_Cost(ns)",to_string(arrays[i]->client.plan.sync_cost).c_str());
+		tp += str;
+		tp += ",\n";;
 		snprintf(str,sizeof(str),fmt.c_str(),"Htod_SyncPlan",parse_binary_to_string(arrays[i]->client.plan.htod_plan,8).c_str());
 		tp += str;
 		tp += ",\n";
 		snprintf(str,sizeof(str),fmt.c_str(),"DtoH_SyncPlan",parse_binary_to_string(arrays[i]->client.plan.dtoh_plan,8).c_str());
 		tp += str;
 		tp += "\n";
-		*/
 		tp += "\t\t\t}";
 		if(i != len -1)
 			tp += ",";
@@ -296,16 +297,17 @@ static inline void add_nf_to_json(string* str,string key,nf_node_t** arrays,int 
 	*str += tp;
 }
 
-void create_sync_JSON(void)
+void create_sync_JSON(float cost)
 {
 	string str = (char*)"{\n";
 	add_item_to_json(&str,"NFV_Number",num_clients);
-	add_item_to_json(&str,"SC_Cost(ns)",(double)global_cost);
+	add_item_to_json(&str,"SC_Cost(ns)",(float)cost);
+	//add_item_to_json(&str,"SC_Cost(ns)",(float)global_cost);
 	add_nf_to_json(&str,"NFVs",nf_array,num_clients);
 	str += "\n}\n";
 	printf("%s",str.c_str());
 
-	FILE* fp = fopen("./standard_nfvs.json","w+");
+	FILE* fp = fopen("./standard_nfvs.json","a+");
 	fputs(str.c_str(),fp);
 	fclose(fp);
 }

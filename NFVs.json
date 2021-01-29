@@ -3,27 +3,27 @@
     "NFV_Number":"3",
     "NFVs":[
         { 
-            "Name":"NF_NAT",
+            "Name":"NF_Firewall",
             "CR_Hint":"0",
-            "GR_Hint":"11110000",       
+            "GR_Hint":"11111000",       
             "CW_Hint":"0",
-            "GW_Hint":"01010000",     
+            "GW_Hint":"00000010",     
             "Type":"GPU"
         },
         { 
-            "Name":"NF_Firewall",
-            "CR_Hint":"11111000",
-            "GR_Hint":"0",       
-            "CW_Hint":"00000010",
-            "GW_Hint":"0",     
-            "Type":"CPU"
-        },  
-        {    
+            "Name":"NF_IPSec",
+            "CR_Hint":"0",
+            "GR_Hint":"00000100",       
+            "CW_Hint":"0",
+            "GW_Hint":"00000100",     
+            "Type":"GPU"
+        },
+        { 
             "Name":"NF_NIDs",
             "CR_Hint":"0",
-            "GR_Hint":"00000100",
+            "GR_Hint":"00000100",       
             "CW_Hint":"0",
-            "GW_Hint":"00000010",  
+            "GW_Hint":"00000010",     
             "Type":"GPU"
         }
     ]

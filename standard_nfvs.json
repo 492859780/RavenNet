@@ -1,24 +1,546 @@
 {
 	"NFV_Number" : "3",
-	"SC_Cost(ns)" : "-166.631287",
+	"SC_Cost(ns)" : "350.986816",
 	"NFVs" : [
 			{
-				"Name":"NF_NAT",
+				"Name":"NF_Firewall",
 				"Type":"GPU_NF",
-				"Cost(ns)":"0.967742",
-				"BufferType":"WITH_GPU_BUFFER",
-				"ReadType":"PACKET",
-				"WriteType":"NONE",
-				"RW_Hint":"1111110000000000"
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
 			},
 			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"231.076080",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "466.788330",
+	"NFVs" : [
+			{
 				"Name":"NF_Firewall",
-				"Type":"CPU_NF",
-				"Cost(ns)":"0.000000",
+				"Type":"GPU_NF",
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"231.076080",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "473.406158",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"231.076080",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"118.709679",
+				"Htod_SyncPlan":"00000100",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "589.207703",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"231.076080",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"118.709679",
+				"Htod_SyncPlan":"00000100",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "354.498230",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "470.299744",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "358.207886",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "474.009399",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "467.062805",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.785767",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
 				"BufferType":"WITH_GPU_BUFFER",
 				"ReadType":"NEEDED",
 				"WriteType":"NEEDED",
-				"RW_Hint":"1111100000000010"
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "582.864319",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.785767",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "470.772461",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.785767",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "586.573975",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.785767",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "348.998230",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.785767",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
 			},
 			{
 				"Name":"NF_NIDs",
@@ -26,8 +548,6332 @@
 				"Cost(ns)":"0.721497",
 				"BufferType":"WITH_GPU_BUFFER",
 				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "464.799744",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.785767",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
 				"WriteType":"PACKET",
-				"RW_Hint":"0000010011111100"
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "470.574219",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "474.009338",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "361.917480",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "477.718994",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "240.143265",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.721497",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "355.944794",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "354.696320",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.419357",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "470.497864",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.419357",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "358.406006",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.419357",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "474.207520",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.419357",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "236.631790",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.419357",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.721497",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "352.433319",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"1.124723",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.419357",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "466.788147",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"231.076080",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "582.589661",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"231.076080",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "589.207520",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"231.076080",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"118.709679",
+				"Htod_SyncPlan":"00000100",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "705.009033",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"231.076080",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"118.709679",
+				"Htod_SyncPlan":"00000100",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "470.299561",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "586.101074",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "474.009247",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "589.810791",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "582.864197",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.785767",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "698.665710",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.785767",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "586.573914",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.785767",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "702.375427",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.785767",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "464.799683",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.785767",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.721497",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "580.601196",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.785767",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "586.375671",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "589.810791",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "477.718964",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "593.520508",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "355.944763",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.721497",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "471.746277",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "470.497803",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.419357",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "586.299316",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.419357",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "474.207458",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.419357",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "590.008972",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.419357",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "352.433228",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.419357",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.721497",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "468.234741",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.926247",
+				"BufferType":"WITHOUT_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.419357",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "472.357483",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"231.076080",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "706.868713",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"231.076080",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"118.709679",
+				"Htod_SyncPlan":"00000100",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "594.776855",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"231.076080",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"118.709679",
+				"Htod_SyncPlan":"00000100",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "710.578369",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"231.076080",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"118.709679",
+				"Htod_SyncPlan":"00000100",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "473.002625",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"231.076080",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.721497",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"118.709679",
+				"Htod_SyncPlan":"00000100",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "588.804138",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"231.076080",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"118.709679",
+				"Htod_SyncPlan":"00000100",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "588.235291",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "591.670410",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "479.578583",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "595.380127",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "357.804382",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.721497",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "473.605896",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "472.357422",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.709679",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "588.158936",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.709679",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "476.067078",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.709679",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "591.868591",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.709679",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "354.292847",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.709679",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.721497",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "470.094360",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.709679",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "588.433472",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.785767",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "704.234985",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.785767",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "592.143188",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.785767",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "707.944702",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.785767",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "470.368958",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.785767",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.721497",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "586.170471",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.785767",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "591.944946",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "595.380066",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "483.288239",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "599.089783",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "361.514038",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.721497",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "477.315552",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "476.067078",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.419357",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "591.868591",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.419357",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "479.776733",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.419357",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "595.578247",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.419357",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "358.002502",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.419357",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.721497",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "473.804016",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.419357",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "466.659241",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"113.011574",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "582.460754",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"113.011574",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "470.368896",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"113.011574",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "586.170410",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"113.011574",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "348.594666",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"113.011574",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.721497",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "464.396179",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"113.011574",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "470.170654",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "473.605774",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "361.513916",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "477.315430",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "239.739700",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.721497",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "355.541229",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "354.292755",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.645161",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "470.094299",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.645161",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "358.002441",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.645161",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "473.803955",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.645161",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "236.228226",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.645161",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.721497",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "352.029755",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.645161",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "588.158813",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"231.076080",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "822.669983",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"231.076080",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"118.709679",
+				"Htod_SyncPlan":"00000100",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "710.578125",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"231.076080",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"118.709679",
+				"Htod_SyncPlan":"00000100",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "826.379700",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"231.076080",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"118.709679",
+				"Htod_SyncPlan":"00000100",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "588.803955",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"231.076080",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.721497",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"118.709679",
+				"Htod_SyncPlan":"00000100",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "704.605469",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"231.076080",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"118.709679",
+				"Htod_SyncPlan":"00000100",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "704.036621",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "707.471741",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "595.379883",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "711.181396",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "473.605652",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.721497",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "589.407166",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "588.158691",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.709679",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "703.960205",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.709679",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "591.868408",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.709679",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "707.669922",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.709679",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "470.094177",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.709679",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.721497",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "585.895691",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.709679",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "704.234802",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.785767",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "820.036316",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.785767",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "707.944458",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.785767",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "823.746033",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.785767",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "586.170288",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.785767",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.721497",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "701.971802",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.785767",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "707.746277",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "711.181396",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "599.089539",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "714.891052",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "477.315308",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.721497",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "593.116821",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "591.868347",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.419357",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "707.669861",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.419357",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "595.578064",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.419357",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "711.379578",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.419357",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "473.803833",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.419357",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.721497",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "589.605347",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.419357",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "582.460571",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"113.011574",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "698.262085",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"113.011574",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "586.170288",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"113.011574",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "701.971802",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"113.011574",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "464.396057",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"113.011574",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.721497",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "580.197571",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"113.011574",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "585.972046",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "589.407166",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "477.315338",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "593.116882",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "355.541138",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.721497",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "471.342651",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "470.094177",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.645161",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"118.786011",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "585.895691",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.645161",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"234.587540",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"NEEDED",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "473.803833",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.645161",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"122.495689",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "589.605347",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.645161",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "352.029602",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.645161",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.721497",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NEEDED",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			}
+		]
+
+}
+{
+	"NFV_Number" : "3",
+	"SC_Cost(ns)" : "467.831116",
+	"NFVs" : [
+			{
+				"Name":"NF_Firewall",
+				"Type":"GPU_NF",
+				"Cost(ns)":"238.297226",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"PACKET",
+				"WriteType":"PACKET",
+				"RW_Hint":"1111100000000010",
+				"Sync_Cost(ns)":"0.000000",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000000"
+			},
+			{
+				"Name":"NF_IPSec",
+				"Type":"GPU_NF",
+				"Cost(ns)":"0.645161",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"NONE",
+				"RW_Hint":"0000010000000100",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
+			},
+			{
+				"Name":"NF_NIDs",
+				"Type":"GPU_NF",
+				"Cost(ns)":"116.523026",
+				"BufferType":"WITH_GPU_BUFFER",
+				"ReadType":"POINTER",
+				"WriteType":"PACKET",
+				"RW_Hint":"0000010000000010",
+				"Sync_Cost(ns)":"112.366409",
+				"Htod_SyncPlan":"00000000",
+				"DtoH_SyncPlan":"00000100"
 			}
 		]
 

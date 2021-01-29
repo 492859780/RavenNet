@@ -3,7 +3,7 @@
 #include<stdio.h>
 #include<unistd.h>
 #include<stdlib.h>
-#include<string.h>
+#include<cstring>
 #include<queue>
 #include<stack>
 using namespace std;
@@ -126,20 +126,18 @@ static nf_node_t* init_node(nf_node_t* node,client_t client,int read_type,int wr
     {
         node->read_type = (memcpy_type_s)read_type;
         node->write_type = (memcpy_type_s)write_type;
-
+        node->client.hint.read_hint = client.hint.read_hint;
+        node->client.hint.write_hint = client.hint.write_hint;
         float cost = 0;
         switch(read_type)
         {
             case NEEDED:
-                node->client.hint.read_hint = client.hint.read_hint;
                 cost += get_data_area_htod_cost(client.hint.read_hint >> (HINT_SIZE-DATA_AREAS));
                 break;
             case PACKET: 
-                node->client.hint.read_hint = PKT_TAG;
-                cost += get_data_area_htod_cost(client.hint.read_hint >> (HINT_SIZE-DATA_AREAS));
+                cost += PKT_SIZE / HTOD_SPEED;
                 break;
             case POINTER:
-                node->client.hint.read_hint = client.hint.read_hint;
                 cost += sizeof(char*)/HTOD_SPEED;
                 break;
         }
@@ -147,15 +145,12 @@ static nf_node_t* init_node(nf_node_t* node,client_t client,int read_type,int wr
         switch(write_type)
         {
             case NEEDED:
-                node->client.hint.write_hint = client.hint.write_hint;
                 cost += get_data_area_dtoh_cost(client.hint.write_hint >> (HINT_SIZE-DATA_AREAS));
                 break;
             case PACKET: 
-                node->client.hint.write_hint = PKT_TAG;
-                cost += get_data_area_dtoh_cost(client.hint.write_hint >> (HINT_SIZE-DATA_AREAS));
+                cost += PKT_SIZE / DTOH_SPEED;
                 break;
             case NONE:
-                node->client.hint.write_hint = NONE_TAG;
                 cost += 0;
                 break;
         }
@@ -206,6 +201,7 @@ void show_tree(void)
 }
 
 //tree init process
+//虽然CPU_NF其实所有的node都是双Needed，但是为了生成和遍历方便，我这里依旧生成了9个结点
 nf_node_t* init_tree()
 {
     //为了让layer能和client数组下标对应，因此初始化成-1
@@ -245,11 +241,24 @@ nf_node_t* init_tree()
 
     return nullptr;
 }
-/*
-下面的剪枝方案中，dirty设置是可能存在问题的
-cpu-dirty与gpu_dirty的动态设置有很大问题
-最后的NF返回模块还没有完成，需要在最后的NF模块进行处理，但是这个算法有个问题，目前每当一个递归回溯时，没法回溯cpu_dirty,gpu_dirty
-*/
+
+static void Record_NF(float cost)
+{
+    int idx = num_clients - 1;
+    stack<nf_node_t*> nodes = global;
+    nf_array = new nf_node_t*[num_clients];
+    nf_node_t* node;
+    while(!nodes.empty() && idx >= 0)
+    {
+        node = nodes.top();
+        printf("%s  NF_type:%s  buffer_type:%s  read_type:%s  writer_type:%s  hint:%d\n",node->client.name,GET_NF_TYPE(node->client.type),GET_BUFFER_TYPE(node->gpu_buffer),GET_MEMCPY_TYPE(node->read_type),GET_MEMCPY_TYPE(node->write_type),node->client.hint.rw_hint);
+        nf_array[idx--] = node;
+        nodes.pop();
+    }
+    create_sync_JSON(cost);
+    delete [] nf_array;
+}
+
 static void Inorder_traverse(nf_node_t* node,nf_node_t* father,float* cost)
 {   
     uint8_t tag = 0;
@@ -269,98 +278,79 @@ static void Inorder_traverse(nf_node_t* node,nf_node_t* father,float* cost)
     if(node == father)
         goto traverse;
 
-    if(node->read_type == PACKET && node->client.type == GPU_NF)
+    //gpu_buffer handle
+    if(node->read_type == PACKET && node->client.type == GPU_NF || father->gpu_buffer == WITH_GPU_BUFFER)
         node->gpu_buffer = WITH_GPU_BUFFER;
+    else
+        node->gpu_buffer = WITHOUT_GPU_BUFFER;
 
-    if(node->write_type == NONE && ((clients[node->layers].hint.write_hint != NONE_TAG && node->gpu_buffer == WITHOUT_GPU_BUFFER) || clients[node->layers].hint.write_hint == FLAG_TAG))
+    if(node->gpu_buffer == WITHOUT_GPU_BUFFER && (node->read_type == POINTER || node->write_type == NONE) || node->write_type == NONE && node->client.hint.write_hint == FLAG_TAG)
         return ;
 
-    //设置上一项的dtoh情况，双NEEDED就是直接用原数据修改的host_buffer
-    if(father->gpu_buffer == WITH_GPU_BUFFER  && node->read_type == NEEDED && node->write_type == NEEDED)
+    //dtoh sync handle 所有sync handle全部都需要在gpu nf上进行
+    //dtoh的同步机制修改的是gpu_dirty
+    if(node->gpu_buffer == WITH_GPU_BUFFER && 
+            (father->client.type == GPU_NF && (father->read_type != NEEDED || father->write_type != NEEDED)) && 
+            (node->read_type == NEEDED && node->write_type == NEEDED))
     {
-        tag = gpu_dirty & node->client.hint.read_hint;
-        printf("dtoh father gpu_dirty:%s current read_hint:%s\n",parse_binary_to_string(gpu_dirty,8).c_str(),parse_binary_to_string(node->client.hint.read_hint,8).c_str());
+        tag = (uint8_t)(gpu_dirty & node->client.hint.read_hint);
+        //printf("dtoh father gpu_dirty:%s current read_hint:%s\n",parse_binary_to_string(gpu_dirty,8).c_str(),parse_binary_to_string(node->client.hint.read_hint,8).c_str());
         if(tag != 0)
         {
             dtoh_flag = 1;
             father->client.plan.dtoh_plan = tag;
             dtoh_cost = get_data_area_dtoh_cost(tag >> (HINT_SIZE - DATA_AREAS));
             *cost += dtoh_cost;
+            father->client.plan.sync_cost += dtoh_cost;
             gpu_dirty = gpu_dirty ^ tag;
         }
     }
 
-    if(node->client.type == GPU_NF)
-    {
-        if(node->gpu_buffer == WITH_GPU_BUFFER)
-        {
-            if(node->read_type == POINTER)
-            {
-                if(father->write_type == NEEDED && father->read_type == NEEDED)
-                {
-                    tag = cpu_dirty & node->client.hint.read_hint;
-                    if(tag != 0)
-                    {
-                        htod_flag = 1;
-                        node->client.plan.htod_plan = tag;
-                        htod_cost = get_data_area_htod_cost(tag >> (HINT_SIZE - DATA_AREAS));
-                        *cost += htod_cost;
-                        cpu_dirty = cpu_dirty ^ tag;  
-                    }
-                }
-            }
-            else if(node->read_type == PACKET)
-            {    
-                cpu_dirty = 0;
-                gpu_dirty = 0;
-            }
-            
-            if(node->read_type == NEEDED)
-            {
-                if(node->write_type == PACKET)
-                    return;
-                else if(node->write_type == NONE)
-                    return;
-                else
-                    cpu_dirty = cpu_dirty | node->client.hint.write_hint;
-            }
-            else
-            {
-                gpu_dirty = gpu_dirty | (node->client.hint.read_hint & node->client.hint.write_hint);
+    if(father->client.type == GPU_NF && father->write_type == PACKET)
+        gpu_dirty = 0;
 
-                //if(node->writer_type == NONE)的所有情况会在实际遍历的过程中剪枝
-                if(node->write_type == PACKET)
-                {    
-                    cpu_dirty = 0;
-                    gpu_dirty = 0;
-                }
-                else if(node->write_type == NEEDED)
-                    gpu_dirty = gpu_dirty ^ node->client.hint.write_hint;
-            }
-        }
-        else
+    //htod的同步处理
+    //htod处理的是cpu_dirty
+    if(node->gpu_buffer == WITH_GPU_BUFFER && (node->write_type != NEEDED || node->read_type != NEEDED) && 
+            (father->read_type == NEEDED && father->write_type == NEEDED))
+    {
+        tag = (uint8_t)(cpu_dirty & node->client.hint.read_hint);
+        //printf("htod father cpu_dirty:%s current read_hint:%s\n",parse_binary_to_string(cpu_dirty,8).c_str(),parse_binary_to_string(node->client.hint.read_hint,8).c_str());
+        if(tag != 0)
         {
-            if(node->read_type == NEEDED && node->write_type == NEEDED)
-                cpu_dirty = cpu_dirty | node->client.hint.write_hint;
-            else
-                return ;
+            htod_flag = 1;
+            node->client.plan.htod_plan = tag;
+            htod_cost = get_data_area_htod_cost(tag >> (HINT_SIZE - DATA_AREAS));
+            *cost += htod_cost;
+            node->client.plan.sync_cost += htod_cost;
+            cpu_dirty = cpu_dirty ^ tag;
         }
     }
+    
+    if(node->client.type == GPU_NF && node->read_type == PACKET)
+        cpu_dirty = 0;
+
+    //这两种情况都是只修改了cpu_buffer的
+    *cost += node->client.cost;
+    if(node->client.type == CPU_NF || node->client.type == GPU_NF && node->read_type == NEEDED && node->write_type == NEEDED)
+        cpu_dirty = (uint8_t)(cpu_dirty | (uint8_t)(node->client.hint.read_hint & node->client.hint.write_hint));
     else
-        cpu_dirty = cpu_dirty | node->client.hint.read_hint & node->client.hint.write_hint;
+        gpu_dirty = (uint8_t)(gpu_dirty | (uint8_t)(node->client.hint.read_hint & node->client.hint.write_hint));
+
+    //printf("GPU dirty:%d read_type:%s write_type:%s\n",gpu_dirty,GET_MEMCPY_TYPE(node->read_type),GET_MEMCPY_TYPE(node->write_type));
 
 traverse:
-    *cost += node->client.cost;
-    
     global.push(node);
     if(node->next[0] == nullptr && node->next[1] == nullptr && node->next[2] == nullptr)
     {   
-        //如果目前是最后一个NF，那么判断是否是WITH_GPU_BUFFER，如果是的话，那么在最后需要进行DTOH的PACKET
-        //可以根据是否有累积脏位，来判断最后一个WITH_GPU_BUFFER的NF是否需要DTOH PACKET
+        //如果最后gpu_dirty中有脏位，则脏位需要记录给最后一个nf
         if(gpu_dirty != NONE_TAG)
         {
             final_flag = 1;
-            final_cost += get_data_area_dtoh_cost(PKT_TAG >> (HINT_SIZE - DATA_AREAS));
+            final_cost = get_data_area_dtoh_cost(gpu_dirty >> (HINT_SIZE - DATA_AREAS));
+            node->client.plan.dtoh_plan = gpu_dirty;
+            node->client.plan.sync_cost += final_cost;
+            *cost += final_cost;
         }
 
         if(*cost < global_cost)
@@ -368,40 +358,27 @@ traverse:
             global_cost = *cost;
             target = global; 
         }
+        Record_NF(*cost);
     }
     else{
         for(uint8_t i = 0;i < GPU_IN * CPU_IN;i++)
         {
-            printf("GPU buffer:%s rd_hint:%s wr_hint:%s\n",GET_BUFFER_TYPE(node->gpu_buffer),parse_binary_to_string(node->client.hint.read_hint,8).c_str(),parse_binary_to_string(node->client.hint.write_hint,8).c_str());
-
-            if(node->gpu_buffer == WITH_GPU_BUFFER)
-                node->next[i]->gpu_buffer = WITH_GPU_BUFFER;
-            else
-                node->next[i]->gpu_buffer = WITHOUT_GPU_BUFFER;
-
-            
-            if(node->next[i]->read_type == POINTER)
-            {
-                if(node->gpu_buffer == WITH_GPU_BUFFER) 
-                    Inorder_traverse(node->next[i],node,cost);
-                continue;
-            }
-
             Inorder_traverse(node->next[i],node,cost);
         }         
     }
 
     //htod dtoh的开销没有重置
     global.pop();
+    *cost -= node->client.cost;
+
     cpu_dirty = f_cpu_dirty;
     gpu_dirty = f_gpu_dirty;
-    *cost -= node->client.cost;
     if(htod_flag)
         *cost -= htod_cost;
     if(dtoh_flag)
         *cost -= dtoh_cost;
     if(final_flag)
-        *cost -= get_data_area_dtoh_cost(PKT_TAG >> (HINT_SIZE - DATA_AREAS));;
+        *cost -= final_cost;
 }
 
 //首先先求出合适的最小cost路径，并与基本路径进行对比，选其中小的一个
@@ -410,15 +387,6 @@ void traverse_tree(void)
 {
     int idx = num_clients-1;
     float cost = 0;
-    nf_array = new nf_node_t*[num_clients];
-    nf_node_t* node;
     Inorder_traverse(root,root,&cost);
     printf("%d nodes traverse successfully mini cost is %f\n",counter,global_cost);
-    while(!target.empty() && idx >= 0)
-    {
-        node = target.top();
-        printf("%s  NF_type:%s  buffer_type:%s  read_type:%s  writer_type:%s  hint:%d\n",node->client.name,GET_NF_TYPE(node->client.type),GET_BUFFER_TYPE(node->gpu_buffer),GET_MEMCPY_TYPE(node->read_type),GET_MEMCPY_TYPE(node->write_type),node->client.hint.rw_hint);
-        nf_array[idx--] = node;
-        target.pop();
-    }
 }

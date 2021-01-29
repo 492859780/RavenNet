@@ -7,10 +7,8 @@ int main(void)
     printf("load json successfully\n");
     get_rw_hint();
     init_tree();
-
-    //show_tree();
-
+    
     traverse_tree();
-    create_sync_JSON();
+    //create_sync_JSON();
     return 0;
 }
