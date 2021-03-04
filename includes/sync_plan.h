@@ -5,6 +5,7 @@
 #define DATA_AREAS 7
 #define HINT_SIZE 8
 #define MAX_CLIENTS 16
+//#define RECORD_ALL_RESULTS
 
 //读写hint
 typedef struct rw_hint_s{
@@ -73,4 +74,6 @@ void get_sync_plan(void);
 //创建json和编译文件
 void create_sync_JSON(float cost);
 void create_compile_file(void);
+void Record_NF(float cost);
+
 #endif  

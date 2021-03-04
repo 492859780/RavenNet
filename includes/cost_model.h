@@ -79,6 +79,5 @@ float get_cost(client_t *client);
 //树相关操作
 nf_node_t* init_tree(void);
 void show_tree(void);
-void traverse_tree(void);
-
+float traverse_tree(void);
 #endif

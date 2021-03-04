@@ -34,7 +34,7 @@ uint8_t parse_str_to_binary(char* hint)
 //load json文件，填充4个hints数组，并且将nf名称信息和type信息写入clients数组
 int load_nfv_json(void)
 {
-	FILE* fp = fopen("./NFVs.json","r+");
+	FILE* fp = fopen("../NFVs.json","r+");
 	if(fp == NULL)
 	{
 		printf("No json file\n");
@@ -120,9 +120,7 @@ int load_nfv_json(void)
 
 	printf("NF service chain\n");
 	for(size_t i = 0 ; i < num_clients ; i++)
-	{
 		printf("NF %ld is %s\n",i,clients[i].name);
-	}
 
 	cJSON_Delete(json);
 	return 1;
@@ -307,7 +305,7 @@ void create_sync_JSON(float cost)
 	str += "\n}\n";
 	printf("%s",str.c_str());
 
-	FILE* fp = fopen("./standard_nfvs.json","a+");
+	FILE* fp = fopen("../standard_nfvs.json","a+");
 	fputs(str.c_str(),fp);
 	fclose(fp);
 }

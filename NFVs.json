@@ -1,7 +1,15 @@
 {
     "Comment":"所有NF的标签含含义都是向后项看齐的，比如NF_NAT，由它下一个NF_Router的数据读取情况来判断CR...",
-    "NFV_Number":"3",
+    "NFV_Number":"4",
     "NFVs":[
+        { 
+            "Name":"NF_NAT",
+            "CR_Hint":"11110000",
+            "GR_Hint":"0",       
+            "CW_Hint":"01010000",
+            "GW_Hint":"0",     
+            "Type":"CPU"
+        },
         { 
             "Name":"NF_Firewall",
             "CR_Hint":"0",

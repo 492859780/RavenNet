@@ -8,7 +8,11 @@ int main(void)
     get_rw_hint();
     init_tree();
     
-    traverse_tree();
-    //create_sync_JSON();
+    double cost = traverse_tree();
+
+#ifndef RECORD_ALL_RESULTS
+    Record_NF(cost);
+#endif
+
     return 0;
 }

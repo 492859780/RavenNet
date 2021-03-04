@@ -242,10 +242,17 @@ nf_node_t* init_tree()
     return nullptr;
 }
 
-static void Record_NF(float cost)
+void Record_NF(float cost)
 {
     int idx = num_clients - 1;
-    stack<nf_node_t*> nodes = global;
+    stack<nf_node_t*> nodes;
+    
+#ifdef RECORD_ALL_RESULTS
+    nodes = global;
+#else
+    nodes = target;
+#endif    
+
     nf_array = new nf_node_t*[num_clients];
     nf_node_t* node;
     while(!nodes.empty() && idx >= 0)
@@ -259,8 +266,10 @@ static void Record_NF(float cost)
     delete [] nf_array;
 }
 
-static void Inorder_traverse(nf_node_t* node,nf_node_t* father,float* cost)
+static bool Inorder_traverse(nf_node_t* node,nf_node_t* father,float* cost)
 {   
+    //flag用来标记当前路径是否是最优路径
+    bool flag = false;
     uint8_t tag = 0;
     uint8_t htod_flag = 0;
     uint8_t dtoh_flag = 0;
@@ -285,11 +294,14 @@ static void Inorder_traverse(nf_node_t* node,nf_node_t* father,float* cost)
         node->gpu_buffer = WITHOUT_GPU_BUFFER;
 
     if(node->gpu_buffer == WITHOUT_GPU_BUFFER && (node->read_type == POINTER || node->write_type == NONE) || node->write_type == NONE && node->client.hint.write_hint == FLAG_TAG)
-        return ;
+        return false;
 
     //dtoh sync handle 所有sync handle全部都需要在gpu nf上进行
     //dtoh的同步机制修改的是gpu_dirty
-    if(node->gpu_buffer == WITH_GPU_BUFFER && 
+    if(father->client.type == GPU_NF && father->write_type == PACKET)
+        gpu_dirty = 0;
+
+    if(gpu_dirty != 0 || node->gpu_buffer == WITH_GPU_BUFFER && 
             (father->client.type == GPU_NF && (father->read_type != NEEDED || father->write_type != NEEDED)) && 
             (node->read_type == NEEDED && node->write_type == NEEDED))
     {
@@ -306,12 +318,12 @@ static void Inorder_traverse(nf_node_t* node,nf_node_t* father,float* cost)
         }
     }
 
-    if(father->client.type == GPU_NF && father->write_type == PACKET)
-        gpu_dirty = 0;
-
     //htod的同步处理
     //htod处理的是cpu_dirty
-    if(node->gpu_buffer == WITH_GPU_BUFFER && (node->write_type != NEEDED || node->read_type != NEEDED) && 
+    if(node->client.type == GPU_NF && node->read_type == PACKET)
+        cpu_dirty = 0;
+
+    if(cpu_dirty != 0 || node->gpu_buffer == WITH_GPU_BUFFER && (node->write_type != NEEDED || node->read_type != NEEDED) && 
             (father->read_type == NEEDED && father->write_type == NEEDED))
     {
         tag = (uint8_t)(cpu_dirty & node->client.hint.read_hint);
@@ -326,9 +338,6 @@ static void Inorder_traverse(nf_node_t* node,nf_node_t* father,float* cost)
             cpu_dirty = cpu_dirty ^ tag;
         }
     }
-    
-    if(node->client.type == GPU_NF && node->read_type == PACKET)
-        cpu_dirty = 0;
 
     //这两种情况都是只修改了cpu_buffer的
     *cost += node->client.cost;
@@ -338,8 +347,9 @@ static void Inorder_traverse(nf_node_t* node,nf_node_t* father,float* cost)
         gpu_dirty = (uint8_t)(gpu_dirty | (uint8_t)(node->client.hint.read_hint & node->client.hint.write_hint));
 
     //printf("GPU dirty:%d read_type:%s write_type:%s\n",gpu_dirty,GET_MEMCPY_TYPE(node->read_type),GET_MEMCPY_TYPE(node->write_type));
-
 traverse:
+    float origin_sync_cost = node->client.plan.sync_cost;
+    float sync_cost = node->client.plan.sync_cost;
     global.push(node);
     if(node->next[0] == nullptr && node->next[1] == nullptr && node->next[2] == nullptr)
     {   
@@ -357,19 +367,30 @@ traverse:
         {    
             global_cost = *cost;
             target = global; 
+            flag = true;
         }
+
+#ifdef RECORD_ALL_RESULTS   
         Record_NF(*cost);
+#endif
     }
     else{
         for(uint8_t i = 0;i < GPU_IN * CPU_IN;i++)
         {
-            Inorder_traverse(node->next[i],node,cost);
+            if( (flag = Inorder_traverse(node->next[i],node,cost)) == false)
+                node->client.plan.sync_cost = origin_sync_cost;
+            else
+            {   
+                sync_cost = node->client.plan.sync_cost;
+                node->client.plan.sync_cost = origin_sync_cost;
+            }
         }         
     }
 
     //htod dtoh的开销没有重置
     global.pop();
     *cost -= node->client.cost;
+    node->client.plan.sync_cost = sync_cost;
 
     cpu_dirty = f_cpu_dirty;
     gpu_dirty = f_gpu_dirty;
@@ -379,14 +400,16 @@ traverse:
         *cost -= dtoh_cost;
     if(final_flag)
         *cost -= final_cost;
+
+    return flag;
 }
 
 //首先先求出合适的最小cost路径，并与基本路径进行对比，选其中小的一个
 //再据此，生成标准NFVs.json文件，include文件
-void traverse_tree(void)
+float traverse_tree(void)
 {
-    int idx = num_clients-1;
     float cost = 0;
     Inorder_traverse(root,root,&cost);
     printf("%d nodes traverse successfully mini cost is %f\n",counter,global_cost);
+    return global_cost;
 }
