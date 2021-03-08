@@ -1,3 +1,0 @@
-/root/Raven/sync_plan/build/CMakeFiles/rebuild_cache.dir
-/root/Raven/sync_plan/build/CMakeFiles/edit_cache.dir
-/root/Raven/sync_plan/build/CMakeFiles/main.dir

@@ -282,7 +282,7 @@ static inline void add_nf_to_json(string* str,string key,nf_node_t** arrays,int 
 		snprintf(str,sizeof(str),fmt.c_str(),"Htod_SyncPlan",parse_binary_to_string(arrays[i]->client.plan.htod_plan,8).c_str());
 		tp += str;
 		tp += ",\n";
-		snprintf(str,sizeof(str),fmt.c_str(),"DtoH_SyncPlan",parse_binary_to_string(arrays[i]->client.plan.dtoh_plan,8).c_str());
+		snprintf(str,sizeof(str),fmt.c_str(),"Dtoh_SyncPlan",parse_binary_to_string(arrays[i]->client.plan.dtoh_plan,8).c_str());
 		tp += str;
 		tp += "\n";
 		tp += "\t\t\t}";

@@ -1,1 +1,0 @@
-/usr/bin/c++   -O0 -g2 -ggdb  -rdynamic CMakeFiles/main.dir/src/cost_model.o CMakeFiles/main.dir/src/main.o CMakeFiles/main.dir/src/sync_plan.o  -o main  -lcjson 
